@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity App</title>
+</head>
+<body>
+    <h1>Form for predicting your obesity category</h1>
+    <form action="predict" method="POST">
+        {% csrf_token %}
+        Age : <input type="number" name="age" required><br>
+        Gender : 
+        <select name="gender" required>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br>
+        Height : <input type="number" placeholder="in CM" name="height" required><br>
+        Weight : <input type="number" placeholder="in KG" name="weight" required><br>
+        <input type="submit">
+    </form><br>
+    <a href="/MLApp">Go to MLApp</a><br>
+    <a href="/">Go TO main home page</a>
+</body>
+</html>
